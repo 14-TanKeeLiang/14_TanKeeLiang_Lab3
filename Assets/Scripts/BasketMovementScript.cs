@@ -15,18 +15,8 @@ public class BasketMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
       float horizontalInput = Input.GetAxis("Horizontal");
 
       transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
-
-        
-       
-
     }
-
-
-
-    
-
 }
