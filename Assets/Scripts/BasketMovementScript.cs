@@ -8,11 +8,14 @@ public class BasketMovementScript : MonoBehaviour
     public float speed;
 
     public int score;
+
+    private AudioSource audioSource;
+    public AudioClip[] audioClip;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,12 +30,14 @@ public class BasketMovementScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Healthy"))
         {
+            audioSource.PlayOneShot(audioClip[0]);
             score += 10;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Unhealthy"))
         {
+            audioSource.PlayOneShot(audioClip[1]);
             SceneManager.LoadScene("Lose Scene");
         }
     }
