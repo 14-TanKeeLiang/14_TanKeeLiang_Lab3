@@ -13,7 +13,7 @@ public class Game_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class Game_Controller : MonoBehaviour
 
         if(basket.score >= 100)
         {
-            SceneManager.LoadScene("Win Scene");
+            SceneManager.LoadScene("GamePlay_Level 2");
         }
     }
 }
